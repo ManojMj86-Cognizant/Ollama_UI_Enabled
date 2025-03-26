@@ -1,0 +1,271 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header .logo img {
+    max-height: 120px;
+    width: auto;
+}
+
+.company-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.chat-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.chat-heading {
+    text-align: center; /* Center-align the heading */
+}
+
+.chat-window {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 15px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.message {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.message.user {
+    justify-content: flex-end;
+}
+
+.message.ai {
+    justify-content: flex-start;
+}
+
+.message-bubble {
+    padding: 10px;
+    display: block;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal;
+    text-align: left;
+}
+
+.message-bubble.user {
+    background-color: #007BFF;
+    color: white;
+}
+
+.message-bubble.ai {
+    background-color: #ddd;
+    color: black;
+}
+
+.chat-input {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; /* Add margin to create space */
+}
+
+.query-input {
+    width: calc(100% - 100px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.submit-button:focus {
+    outline: 2px solid #0056b3;
+}
+
+.option-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.option {
+    margin: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 2px solid #cccccc;
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option:hover {
+    background-color: #e7e7e7;
+    border-color: #007BFF;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    margin-top: 65px;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.sidebar button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    text-align: left;
+}
+
+.sidebar button:hover {
+    background-color: #555;
+}
+
+.sidebar button:focus {
+    outline: 2px solid #555;
+}
+
+.selected {
+    background-color: rgb(0, 8, 255); /* Highlight color */
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Message bubble styling with border */
+.message-bubble {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc; /* Add border for visual differentiation */
+    margin: 5px 0;
+    max-width: 80%;
+    word-wrap: break-word;
+    background-color: #f9f9f9; /* Light background for AI response */
+}
+
+/* User message bubble styling */
+.message.user .message-bubble {
+    background-color: #007bff;
+    color: white;
+    text-align: left;
+}
+
+/* AI message bubble styling */
+.message.ai .message-bubble {
+    background-color: #f1f1f1;
+    color: black;
+    text-align: left;
+    border: 1px solid #d1d1d1;
+}
+
+/* Styles for formatted text inside AI response */
+.message-bubble strong {
+    font-weight: bold;
+    color: #333;
+}
+
+.message-bubble ul {
+    padding-left: 20px;
+}
+
+.message-bubble li {
+    margin: 5px 0;
+}
+
+/* Indentations for lines after colon and dashes */
+.message-bubble {
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+
+/* Add specific styling for colon and dash-indented lines */
+.message-bubble br + &nbsp {
+    padding-left: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+table {
+    width: 100%;
+    table-layout: auto;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 8px;
+    word-wrap: break-word;
+}
